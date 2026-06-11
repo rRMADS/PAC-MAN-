@@ -74,7 +74,7 @@
 /* ═══════════════════════════════════════════
    Configuracoes de jogo
    ═══════════════════════════════════════════ */
-#define FRAME_MS        85      /* ~12 fps (padrao) */
+#define FRAME_MS        65      /* ~15 fps (padrao) */
 #define SCORE_DOT       10
 #define SCORE_POWER     50
 #define SCORE_GHOST     200
@@ -133,10 +133,10 @@
 /* ═══════════════════════════════════════════
    Velocidades de jogo (ms por frame)
    ═══════════════════════════════════════════ */
-#define SPEED_SLOW      280   /* ~3-4 cel/s — muito lenta */
-#define SPEED_NORMAL    100   /* ~10 cel/s  — classico    */
-#define SPEED_FAST       85   /* ~12 cel/s  — desafio     */
-#define SPEED_EXTREME    50   /* ~20 cel/s  — impossivel  */
+#define SPEED_SLOW      180   /* ~5-6 cel/s — lenta       */
+#define SPEED_NORMAL     65   /* ~15 cel/s  — classico    */
+#define SPEED_FAST       45   /* ~22 cel/s  — desafio     */
+#define SPEED_EXTREME    25   /* ~40 cel/s  — impossivel  */
 
 /* ═══════════════════════════════════════════
    Tipos de IA dos fantasmas

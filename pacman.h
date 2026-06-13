@@ -78,9 +78,9 @@
 #define SCORE_DOT       10
 #define SCORE_POWER     50
 #define SCORE_GHOST     200
-#define POWER_DURATION  70      /* frames de modo assustado */
-#define RESPAWN_DELAY   300     /* frames para um ponto/power reaparecer */
-#define FRUIT_INTERVAL  200     /* frames entre aparicoes da fruta bonus */
+#define POWER_DURATION  50      /* frames de modo assustado */
+#define RESPAWN_DELAY   150     /* frames para um ponto/power reaparecer */
+#define FRUIT_INTERVAL  120     /* frames entre aparicoes da fruta bonus */
 #define FRUIT_DURATION  250     /* frames que a fruta fica visivel       */
 #define SCORE_FRUIT     300     /* pontos por comer a fruta bonus        */
 #define FRUIT_X         13      /* coluna da fruta no mapa               */
@@ -119,9 +119,9 @@
 #define DOUBLE_MAP_DUR   180
 
 /* Duracao do efeito (frames) */
-#define SPEED_EFFECT_DUR   120
-#define FREEZE_EFFECT_DUR   80
-#define DOUBLE_EFFECT_DUR  150
+#define SPEED_EFFECT_DUR    80
+#define FREEZE_EFFECT_DUR   50
+#define DOUBLE_EFFECT_DUR   90
 
 /* Pontos por coletar item especial */
 #define SCORE_POWERITEM  150
@@ -303,6 +303,7 @@ typedef struct {
     int       respawn_grid[MAP_H][MAP_W]; /* countdown de reapare. de cada celula */
     int       original_grid[MAP_H][MAP_W]; /* tipo original de cada celula do mapa */
     int       fruit_timer;    /* >0: fruta ativa com N frames restantes */
+    int       fruit_spawn;    /* countdown ate a proxima fruta bonus    */
     /* Poderes especiais ativos */
     int speed_timer;         /* frames de turbo restantes         */
     int freeze_timer;        /* frames de congelamento restantes  */

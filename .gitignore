@@ -1,0 +1,42 @@
+# ============================================================
+# .gitignore - PAC-MAN em C
+# Versiona apenas o codigo-fonte. Tudo que e gerado pela
+# compilacao ou execucao fica de fora (a professora compila
+# do fonte com `make`).
+# Obs.: o git NAO aceita comentario na mesma linha do padrao,
+# por isso cada comentario fica em sua propria linha.
+# ============================================================
+
+# --- Binarios compilados ---
+*.exe
+*.out
+
+# --- Arquivos-objeto e bibliotecas ---
+*.o
+*.obj
+*.a
+*.so
+*.dll
+
+# --- Dados gerados em tempo de execucao ---
+# ranking salvo pelo jogo ao rodar
+scores.dat
+# saida capturada dos testes
+test_output.txt
+
+# --- Depuracao / build ---
+# headers pre-compilados (ex.: pacman.h.gch)
+*.gch
+*.exe.stackdump
+*.log
+
+# --- Sistema operacional ---
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# --- Editores / IDEs ---
+.vscode/
+.idea/
+*.swp
+*~

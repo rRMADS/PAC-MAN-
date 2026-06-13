@@ -9,6 +9,7 @@
 
 CC      = gcc
 CFLAGS  = -std=c11 -Wall -Wextra -O2
+LDFLAGS = -lwinmm
 TARGET  = pacman.exe
 TEST_T  = test.exe
 
@@ -26,7 +27,7 @@ all: $(TARGET)
 	@echo  Execute: $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 # Regra generica para .o
 %.o: %.c

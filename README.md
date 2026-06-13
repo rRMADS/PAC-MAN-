@@ -88,23 +88,58 @@ O projeto segue o padrão **MVC**:
 
 ### Pré-requisitos
 
-- GCC (MinGW-w64 no Windows ou GCC nativo no Linux/macOS)
-- Terminal com suporte a ANSI/VT100 (Windows Terminal, WSL, Linux, macOS)
+- **GCC** (MinGW-w64 no Windows ou GCC nativo no Linux/macOS)
+- **Make** (`mingw32-make` no Windows, já incluso no MinGW-w64)
+- **Windows Terminal** (recomendado) — o jogo usa caracteres Unicode/UTF-8
+  (🍒 🍓 fantasmas, molduras `╔═╗`). No `cmd.exe` antigo eles podem virar
+  quadradinhos. No Windows: tecla `Win`, digite "Terminal" e abra o **Windows Terminal**.
 
-### Compilar e jogar
+### Passo a passo (clonar → compilar → jogar)
+
+**1. Clonar o repositório:**
+
+```bash
+git clone https://github.com/rRMADS/PAC-MAN-.git
+```
+
+**2. Entrar na pasta do projeto:**
+
+```bash
+cd "PAC-MAN-"
+```
+
+**3. Compilar:**
 
 ```bash
 make
-./pacman.exe
 ```
 
-### Executar os testes automatizados
+> No Windows, se `make` não for encontrado, use `mingw32-make`.
+>
+> Para compilar **sem o Make** (gcc direto), use — repare no **`-lwinmm`** ao final,
+> que é obrigatório (corrige o controle de velocidade no Windows):
+>
+> ```bash
+> gcc -std=c11 -Wall -O2 -o pacman.exe main.c model/model.c view/view.c controller/controller.c -lwinmm
+> ```
+
+**4. Executar o jogo:**
+
+```bash
+pacman.exe
+```
+
+(no Linux/macOS: `./pacman.exe`)
+
+### Outros comandos
+
+Executar os testes automatizados (P07):
 
 ```bash
 make test
 ```
 
-### Limpar arquivos compilados
+Limpar os arquivos compilados:
 
 ```bash
 make clean

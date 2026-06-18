@@ -8,8 +8,10 @@
 # ============================================================
 
 # --- Binarios compilados ---
-*.exe
+# pacman.exe e versionado para download direto no GitHub.
+# Os demais executaveis (ex.: test.exe) continuam fora.
 *.out
+test.exe
 
 # --- Arquivos-objeto e bibliotecas ---
 *.o
